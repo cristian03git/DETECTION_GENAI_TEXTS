@@ -4,7 +4,6 @@
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange)
 ![PyTorch](https://img.shields.io/badge/PyTorch-DeepLearning-red)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-ML-blue)
-![Dataset](https://img.shields.io/badge/Dataset-Multilingual-yellow)
 ![Research](https://img.shields.io/badge/Research-AI%20Text%20Detection-green)
 
 Repository containing the implementation and experimental results for
@@ -81,14 +80,14 @@ classification efficiency.
 
 ------------------------------------------------------------------------
 
-### Custom Detection Models
+### MLP-based Detection Models
 
--   `DETECTOR_ART&MH.ipynb`
--   `DETECTOR_dtEN.ipynb`
--   `DETECTOR_dtITA.ipynb`
+- `DETECTOR_ART&MH.ipynb`
+- `DETECTOR_dtEN.ipynb`
+- `DETECTOR_dtITA.ipynb`
 
-These notebooks implement **custom architectures designed specifically
-for AI-text detection tasks**.
+These notebooks implement **Multi-Layer Perceptron (MLP) models**
+for AI-generated text detection.
 
 ------------------------------------------------------------------------
 
@@ -114,41 +113,44 @@ Used to extract features and prepare datasets for training.
 
 ### Experimental Test Notebooks
 
-The following notebooks perform **controlled evaluation experiments**:
+The following notebooks perform **evaluation experiments on a single-class Italian dataset** in order to assess the robustness of the previously implemented detection models.
 
--   `test_singleclass_withCNN-DETECTOR_ART&MH.ipynb`
--   `test_singleclass_withCNNmobilenet-DETECTOR_dtEN.ipynb`
--   `test_singleclass_withDETECTOR_ART&MH.ipynb`
--   `test_singleclass_withDETECTOR_dtEN.ipynb`
--   `test_singleclass_withTRANSFORMER-DETECTOR_dtEN.ipynb`
+- `test_singleclass_withCNN-DETECTOR_ART&MH.ipynb`
+- `test_singleclass_withCNNmobilenet-DETECTOR_dtEN.ipynb`
+- `test_singleclass_withDETECTOR_ART&MH.ipynb`
+- `test_singleclass_withDETECTOR_dtEN.ipynb`
+- `test_singleclass_withTRANSFORMER-DETECTOR_dtEN.ipynb`
 
-These experiments help analyze **model robustness and performance under
-simplified classification scenarios**.
+These notebooks apply the previously described detectors (CNN-based, MobileNet-based, MLP-based, and Transformer-based models) to a **monoclass Italian dataset**.  
+The goal of these experiments is to evaluate the **effective robustness and generalization capability** of the detectors when exposed to a simplified and controlled testing scenario.
 
 ------------------------------------------------------------------------
 
 # Results
 
-The `Results` folder contains experimental outputs stored as **Excel
-files**.
+The `Results` folder contains experimental outputs stored as **Excel files**.
 
-These files report evaluation metrics including:
+These files report the results obtained from **online AI-text detection tools**
+used as a benchmark for comparison with the detectors implemented in this
+repository.
 
--   Accuracy
--   Precision
--   Recall
--   F1-score
--   Training statistics
--   Validation statistics
+In particular, the Excel files collect the **percentages of AI-generated
+content detected within the texts of each dataset**. These values allow a
+direct comparison between the performance of external detectors and the
+models implemented in this project.
 
 ### Files included
 
--   `en_train-DetectionAI.xlsx`
--   `en_dev-DetectionAI.xlsx`
--   `it_train-DetectionAI.xlsx`
--   `it_dev-DetectionAI.xlsx`
--   `mydt_train-DetectionAI.xlsx`
--   `mydt_test-DetectionAI.xlsx`
+- `en_train-DetectionAI.xlsx`
+- `en_dev-DetectionAI.xlsx`
+- `it_train-DetectionAI.xlsx`
+- `it_dev-DetectionAI.xlsx`
+- `mydt_train-DetectionAI.xlsx`
+- `mydt_test-DetectionAI.xlsx`
+
+Each file contains the detection results for the corresponding dataset,
+reporting the **percentage of AI detected in the texts analyzed by different
+online detection systems**.
 
 ------------------------------------------------------------------------
 
@@ -198,23 +200,30 @@ The project relies on the following technologies:
 
 To reproduce the experiments:
 
-1.  Clone the repository
+### 1. Clone the repository
 
-```{=html}
-<!-- -->
+```bash
+git clone https://github.com/USERNAME/DETECTION_GENAI.git
+cd DETECTION_GENAI
 ```
-    git clone https://github.com/USERNAME/DETECTION_GENAI.git
 
-2.  Open the notebooks in **Google Colab** or **Jupyter Notebook**
+### 2. Open the notebooks
 
-3.  Install required libraries
+Open the notebooks using either:
+	•	**Google Colab**
+	•	**Jupyter Notebook**
 
-```{=html}
-<!-- -->
+### 3.  Install required libraries
+
+Install the required Python dependecies:
+```bash
+pip install pandas numpy matplotlib seaborn tqdm torch scikit-learn
 ```
-    pip install numpy pandas scikit-learn tensorflow torch
+The notebooks rely on the following Python libraries: pandas, numpy, matplotlib.pyplot, seaborn, tqdm.notebook, torch, torch.nn, torcch.utils.data, torch.cuda.amp and scikit-learn (`model_selection,metrics`). 
 
-4.  Run the notebooks sequentially.
+Additionally, several Python standard library modules are used: os, math, copy, re, random, collections. These modules are included in the standard Python distribution and do not require installation.
+
+### 4.  Run the notebooks sequentially.
 
 ------------------------------------------------------------------------
 
@@ -225,7 +234,7 @@ corresponding work.
 
     @misc{buttaro2026genai_detection,
       author = {Cristian Buttaro},
-      title = {Detection of AI-Generated Texts Using Neural Architectures},
+      title = {Automatic Detection of Gen-AI Texts: A Comparative Framework of Neural Models},
       year = {2026},
       note = {GitHub repository}
     }
