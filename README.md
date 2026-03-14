@@ -6,28 +6,18 @@
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-ML-blue)
 ![Research](https://img.shields.io/badge/Research-AI%20Text%20Detection-green)
 
-Repository containing the implementation and experimental results for
-the research project on **detecting AI-generated texts using Machine
-Learning and Deep Learning techniques**.<br> 
-
-The project explores multiple neural architectures including **CNNs,
-MobileNet-based models, and Transformer-based models** to distinguish
-between **human-written texts and AI-generated texts**.
-
-The experiments are implemented using **Python and Jupyter Notebooks**,
-with execution primarily performed in **Google Colab environments**.
+Repository containing the implementation and experimental results for the research project on **detecting AI-generated texts using Machine
+Learning and Deep Learning techniques**.<br>
+The project explores multiple neural architectures including **CNNs,MobileNet-based models, and Transformer-based models** to distinguish between **human-written texts and AI-generated texts**.<br>
+The experiments are implemented using **Python and Jupyter Notebooks**, with execution primarily performed in **Google Colab environments**.
 
 ------------------------------------------------------------------------
 
 # Research Context
 
-The rapid diffusion of **Generative AI models** (e.g., Large Language
-Models) has made the automatic detection of AI-generated content an
-important research problem.
-
-This repository investigates the effectiveness of different **neural
-architectures for AI text detection**, evaluating their performance
-across multilingual datasets.
+The rapid diffusion of **Generative AI models** (e.g., Large Language Models) has made the automatic detection of AI-generated content an
+important research problem.<br>
+This repository investigates the effectiveness of different **neural architectures for AI text detection**, evaluating their performance across multilingual datasets.
 
 ------------------------------------------------------------------------
 
@@ -49,11 +39,9 @@ across multilingual datasets.
 
 # Notebook_colab
 
-This directory contains all **Jupyter Notebooks used for model
-development, training, and evaluation**.
+This directory contains all **Notebooks used for model development, training, and evaluation**.
 
 The notebooks include:
-
 -   data preprocessing
 -   model architecture definition
 -   training pipelines
@@ -66,17 +54,13 @@ The notebooks include:
 -   `CNN-DETECTOR_dtEN.ipynb`
 -   `CNN-DETECTOR_dtITA.ipynb`
 
-These notebooks implement **Convolutional Neural Network classifiers**
-for detecting AI-generated texts.
+These notebooks implement **Convolutional Neural Network classifiers** for detecting AI-generated texts.
 
 ------------------------------------------------------------------------
 
-### MobileNet-based Detector
+### `CNNmobilenet-DETECTOR_dtEN.ipynb`
 
-`CNNmobilenet-DETECTOR_dtEN.ipynb`
-
-Implements a **MobileNet-inspired architecture** optimized for
-classification efficiency.
+Implements a **MobileNet-inspired architecture** optimized for classification efficiency.
 
 ------------------------------------------------------------------------
 
@@ -91,21 +75,16 @@ for AI-generated text detection.
 
 ------------------------------------------------------------------------
 
-### Transformer-based Model
-
-`TRANSFORMER-DETECTOR_dtEN.ipynb`
+### `TRANSFORMER-DETECTOR_dtEN.ipynb`
 
 Implements a **Transformer-based architecture** for detecting
-AI-generated content.
-
+AI-generated content.<br>
 Transformers are particularly effective for modeling long-range
 dependencies in text.
 
 ------------------------------------------------------------------------
 
-### Utility Notebook
-
-`extractor_for_dt.ipynb`
+### Utility Notebook : `extractor_for_dt.ipynb`
 
 Used to extract features and prepare datasets for training.
 
@@ -121,17 +100,15 @@ The following notebooks perform **evaluation experiments on a single-class Itali
 - `test_singleclass_withDETECTOR_dtEN.ipynb`
 - `test_singleclass_withTRANSFORMER-DETECTOR_dtEN.ipynb`
 
-These notebooks apply the previously described detectors (CNN-based, MobileNet-based, MLP-based, and Transformer-based models) to a **monoclass Italian dataset**.  
+These notebooks apply the previously described detectors (CNN-based, MobileNet-based, MLP-based, and Transformer-based models) to a **monoclass Italian dataset**.<br> 
 The goal of these experiments is to evaluate the **effective robustness and generalization capability** of the detectors when exposed to a simplified and controlled testing scenario.
 
 ------------------------------------------------------------------------
 
 # Results
 
-The `Results` folder contains experimental outputs stored as **Excel files**.
-
-These files report the results obtained from **online AI-text detection tools**
-used as a benchmark for comparison with the detectors implemented in this
+The `Results` folder contains experimental outputs stored as **Excel files**.<br>
+These files report the results obtained from **online AI-text detection tools** used as a benchmark for comparison with the detectors implemented in this
 repository.
 
 In particular, the Excel files collect the **percentages of AI-generated
