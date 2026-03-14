@@ -2,6 +2,9 @@
 
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
 ![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange)
+![PyTorch](https://img.shields.io/badge/PyTorch-DeepLearning-red)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-ML-blue)
+![Dataset](https://img.shields.io/badge/Dataset-Multilingual-yellow)
 ![Research](https://img.shields.io/badge/Research-AI%20Text%20Detection-green)
 
 Repository containing the implementation and experimental results for
